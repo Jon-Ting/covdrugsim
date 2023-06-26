@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from Honours.MD.config import MD_PATH, SINGLE_PLOT_WIDTH, SINGLE_PLOT_HEIGHT, SINGLE_PLOT_LEG_WIDTH, \
+from covdrugsim.mdsim.config import MD_PATH, SINGLE_PLOT_WIDTH, SINGLE_PLOT_HEIGHT, SINGLE_PLOT_LEG_WIDTH, \
     SINGLE_PLOT_LEG_HEIGHT, FOUR_PLOTS_WIDTH, FOUR_PLOTS_HEIGHT, SIX_PLOTS_WIDTH, SIX_PLOTS_HEIGHT
 
 sns.set(context='talk', font_scale=0.8)

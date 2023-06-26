@@ -2,8 +2,8 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-from QM.runGaussian.settings import DATA_PATH
-from QM.visAnalysis.plotConfig import combination_dict, charge_list, charge_list_A, charge_list_B, DI_list, \
+from covdrugsim.qmcalc.runGaussian.settings import DATA_PATH
+from covdrugsim.qmcalc.visAnalysis.plotConfig import combination_dict, charge_list, charge_list_A, charge_list_B, DI_list, \
     benchmarking_data, barrier_data
 
 sns.set(context='talk', font_scale=0.9)

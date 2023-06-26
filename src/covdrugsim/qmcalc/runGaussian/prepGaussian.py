@@ -1,6 +1,6 @@
 import os
 from os.path import isdir
-from QM_Gaussian.settings import keyword_dict
+from covdrugsim.qmcalc.settings import keyword_dict
 
 
 def gen_from_dir(input_dir, WALLTIME, VMEM, MEM, JOBFS, CHARGE, SPIN, METHOD, BASIS_SET, SOLVENT, SOLVENT_MODEL, CLUSTER, CALC_TYPE, NCPUS, SOFTWARE, VERSION):

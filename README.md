@@ -2,7 +2,7 @@
 
 Quantum mechanical calculations and molecular dynamics simulations of covalent drugs.
 
-Written by Jonathan Yik Chang Ting (Student ID: 44254124) for UQ BAdSc(Hons) Honours Project 2019.
+Written by Jonathan Yik Chang Ting (Student ID: 44254124) for University of Queensland Bachelors of Advanced Science Honours Project (CHEM6511) in 2019.
 Project Title: Molecular Modelling of Reversible Covalent Inhibition of Bruton’s Tyrosine Kinase by Cyanoacrylamides
 
 ## Installation

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import re
 from os.path import isdir
-from QM.runGaussian.settings import DATA_PATH
+from covdrugsim.qmcalc.runGaussian.settings import DATA_PATH
 
 
 def sort_human(list):

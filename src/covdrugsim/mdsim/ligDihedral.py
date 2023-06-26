@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from Honours.MD.config import MD_PATH, SIX_PLOTS_WIDTH, SIX_PLOTS_HEIGHT, SIX_PLOTS_HORIZONTAL_WIDTH, SIX_PLOTS_HORIZONTAL_HEIGHT, inhibitor_list
+from covdrugsim.mdsim.config import MD_PATH, SIX_PLOTS_WIDTH, SIX_PLOTS_HEIGHT, SIX_PLOTS_HORIZONTAL_WIDTH, SIX_PLOTS_HORIZONTAL_HEIGHT, inhibitor_list
 
 sns.set(context='paper', font_scale=1.5)
 CURR_DIR = os.getcwd()
