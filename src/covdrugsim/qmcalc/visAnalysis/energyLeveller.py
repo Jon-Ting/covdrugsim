@@ -271,7 +271,7 @@ def ReadInput(filename):
         print("ERROR: Image width not set! e.g.:\nwidth = 500")
         sys.exit("Width not set")
     if outName == "":
-        print("ERROR: output file name not set! e.g.:\n output-file = example.pdf")
+        print("ERROR: output file name not set! e.g.:\n output-file = energyLevellerExample.pdf")
         sys.exit("Output name not set")
 
     outDiagram = Diagram(width, height, fontSize, outName)
@@ -294,9 +294,9 @@ def ReadInput(filename):
 
 
 def MakeExampleFile():
-    output = open("example.inp", 'w')
+    output = open("energyLevellerExample.inp", 'w')
 
-    output.write("output-file     = example.pdf\nwidth           = 8\nheight          = 8\nenergy-units    = $\\Delta$E"
+    output.write("output-file     = energyLevellerExample.pdf\nwidth           = 8\nheight          = 8\nenergy-units    = $\\Delta$E"
                  "  kJ/mol\nfont size       = 10\n\n#   This is a comment. Lines that begin with a # are ignored.\n#   "
                  "Available colours are those accepted by matplotlib \n\n#   Now begins the states input\n\n#—————–  Pa"
                  "th 1 ————————————————\n\n#   Add the first path, all paths are relative to the reactant energies so\n"
@@ -325,7 +325,7 @@ def MakeExampleFile():
                  "ts:#009933\n    column      = 4\n    labelOffset = 0,1\n    textOffset  = 0,1.4\n}\n")
 
     output.close()
-    print("Made example file as 'example.inp'.")
+    print("Made example file as 'energyLevellerExample.inp'.")
 
 
 ######################################################################################################
@@ -338,12 +338,12 @@ def main(inp_path):
     print("o=======================================================o")
     print("         Beginning Energy Level Diagram")
     print("o=======================================================o")
-    #if len(sys.argv) == 1:
-    #   print("\nI need an input file!\n")
-    #    if not os.path.exists("example.inp"):
-    #        print("\nAn example file will be made.")
-    #        MakeExampleFile()
-    #    sys.exit("No Input file.")
+    if len(sys.argv) == 1:
+        print("\nI need an input file!\n")
+        if not os.path.exists("energyLevellerExample.inp"):
+            print("\nAn example file will be made.")
+            MakeExampleFile()
+        sys.exit("No Input file.")
     if len(sys.argv) > 2:
         print("Incorrect arguments. Correct call:\npython EnergyLeveler.py <INPUT FILE>")
         sys.exit("Incorrect Arguments.")
@@ -362,4 +362,5 @@ def main(inp_path):
 
 
 if __name__ == "__main__":
-    main("C:/Users/s4425412/PycharmProjects/CovInhib/run_gaussian/a-santonin.inp")
+    main('')
+    #main("C:/Users/s4425412/PycharmProjects/CovInhib/run_gaussian/a-santonin.inp")

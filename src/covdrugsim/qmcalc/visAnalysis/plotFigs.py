@@ -2,7 +2,6 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-from covdrugsim.qmcalc.runGaussian.settings import DATA_PATH
 from covdrugsim.qmcalc.visAnalysis.plotConfig import combination_dict, charge_list, charge_list_A, charge_list_B, DI_list, \
     benchmarking_data, barrier_data
 
@@ -27,6 +26,7 @@ def lin_reg(m, c, r2, xlimit, leg_loc, font_size="x-small"):
 
 if __name__ == "__main__":
     analysis_type = "Regression"
+    DATA_PATH = '.'
     if analysis_type == "Bar":
 
         # Statistical Measures

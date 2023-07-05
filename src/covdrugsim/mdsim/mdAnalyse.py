@@ -17,4 +17,5 @@ def sumCharge(inpFileName, outFileName, verbose=False):
         print('Total charges: {0}'.format(totalCharge))
 
 
-sumCharge('charges.txt', 'totCharge.txt', True)
+if __name__ == '__main__':
+    sumCharge('charges.txt', 'totCharge.txt', True)

@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import re
 from os.path import isdir
-from covdrugsim.qmcalc.runGaussian.settings import DATA_PATH
 
 
 def sort_human(list):

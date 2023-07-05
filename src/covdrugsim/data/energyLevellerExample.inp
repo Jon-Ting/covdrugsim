@@ -1,0 +1,201 @@
+output-file     = example.pdf
+width           = 8
+height          = 6
+energy-units    = $\Delta$G  kcal/mol
+font size       = 9
+
+#   This is a comment. Lines that begin with a # are ignored.
+#   Available colours are those accepted by matplotlib 
+
+#   Now begins the states input
+
+#������  Path 1 ����������������
+
+#   Add the first path, all paths are relative to the reactant energies so
+#   start at zero
+
+{
+    name        = R
+    text-colour = black
+    label       = R + MeSH/MeS$^{-}$
+    energy      = 0.0
+    labelColour = black
+    linksto     = TS6Ra:cyan,TS6Rs:magenta,TS6Sa:orange,TS6Ss:red,TS10Ra:purple,TS10Rs:#003399,TS10Sa:green,TS10Ss:blue
+    column      = 1
+    labelOffset = -0.05,0
+    textOffset  = +0.25,0
+}
+
+# ������ TS ����������������
+# TS6
+{
+    name        = TS6Ra
+    text-colour = cyan
+    label       = [TS6Ra]$^{++}$
+    energy      = +21.2
+    labelColour = cyan
+    linksto     = P6R7R:cyan,P6R7S:cyan
+    column      = 2
+    legend      = TS6Ra
+    labelOffset = +0.15,0
+    textOffset  = +0.25,0
+}
+
+{
+    name        = TS6Rs
+    text-colour = magenta
+    label       = [TS6Rs]$^{++}$
+    energy      = +17.5
+    labelColour = magenta
+    linksto     = P6R7R:magenta,P6R7S:magenta
+    column      = 2
+    legend      = TS6Rs
+    labelOffset = +0.15,-1.8
+    textOffset  = +0.25,-1.2
+}
+
+{
+    name        = TS6Sa
+    text-colour = orange
+    label       = [TS6Sa]$^{++}$
+    energy      = +17.8
+    labelColour = orange
+    linksto     = P6S7R:orange,P6S7S:orange
+    column      = 2
+    legend      = TS6Sa
+    labelOffset = +0.15,+0.7
+    textOffset  = +0.25,+1.4
+}
+
+{
+    name        = TS6Ss
+    text-colour = red
+    label       = [TS6Ss]$^{++}$
+    energy      = +11.5
+    labelColour = red
+    linksto     = P6S7R:red,P6S7S:red
+    column      = 2
+    legend      = TS6Ss
+    labelOffset = +0.15,0
+    textOffset  = +0.25,0
+}
+
+# TS10
+{
+    name        = TS10Ra
+    text-colour = purple
+    label       = [TS10Ra]$^{++}$
+    energy      = +25.5
+    labelColour = purple
+    linksto     = P10R:purple
+    column      = 4
+    legend      = TS10Ra
+    labelOffset = +0.15,+0.7
+    textOffset  = +0.25,+1.4
+}
+
+{
+    name        = TS10Rs
+    text-colour = #003399
+    label       = [TS10Rs]$^{++}$
+    energy      = +25.2
+    labelColour = #003399
+    linksto     = P10R:#003399
+    column      = 4
+    legend      = TS10Rs
+    labelOffset = +0.15,-1.8
+    textOffset  = +0.25,-1.2
+}
+
+{
+    name        = TS10Sa
+    text-colour = green
+    label       = [TS10Sa]$^{++}$
+    energy      = +18.2
+    labelColour = green
+    linksto     = P10S:green
+    column      = 4
+    legend      = TS10Sa
+    labelOffset = +0.15,0
+    textOffset  = +0.25,0
+}
+
+{
+    name        = TS10Ss
+    text-colour = blue
+    label       = [TS10Ss]$^{++}$
+    energy      = +13.6
+    labelColour = blue
+    linksto     = P10S:blue
+    column      = 4
+    legend      = TS10Ss
+    labelOffset = +0.15,0
+    textOffset  = +0.25,0
+}
+
+# ������ P ����������������
+#P6
+{
+    name        = P6R7R
+    text-colour = magenta
+    label       = P6R7R
+    energy      = -3.4
+    labelColour = magenta
+    column      = 3
+    labelOffset = +0.6,-0.2
+    textOffset  = +0.6,-0.2
+}
+
+{
+    name        = P6R7S
+    text-colour = magenta
+    label       = P6R7S
+    energy      = -5.5
+    labelColour = magenta
+    column      = 3
+    labelOffset = +0.27,-1.8
+    textOffset  = +0.25,-1.2
+}
+
+{
+    name        = P6S7R
+    text-colour = red
+    label       = P6S7R
+    energy      = -3.6
+    labelColour = red
+    column      = 3
+}
+
+{
+    name        = P6S7S
+    text-colour = red
+    label       = P6S7S
+    energy      = -1.5
+    labelColour = red
+    column      = 3
+    labelOffset = +0.27,+0.7
+    textOffset  = +0.25,+1.4
+}
+
+#P10
+{
+    name        = P10R
+    text-colour = #003399
+    label       = P10R
+    energy      = -1.0
+    labelColour = #003399
+    column      = 5
+    labelOffset = +0.05,0
+    textOffset  = 0,0
+}
+
+{
+    name        = P10S
+    text-colour = blue
+    label       = P10S
+    energy      = -0.9
+    labelColour = blue
+    column      = 5
+    labelOffset = +0.55,-0.1
+    textOffset  = +0.5,-0.1
+}
