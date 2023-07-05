@@ -13,8 +13,9 @@
 * Automatic analysis of molecular dynamics simulation trajectories.
 
 ### Under Development
+* Restructure the source code.
 * Complete unit tests in tests/.
-* Complete function docstrings.
+* Add function docstrings.
 * Complete example.ipynb.
 
 ## Installation
