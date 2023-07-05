@@ -1,10 +1,11 @@
 import os
-import pandas as pd
-import re
 from os.path import isdir
+import re
+
+import pandas as pd
 
 
-def sort_human(list):
+def sortHuman(list):
     """Sort a given list in a more "human" way"""
     convert = lambda text: float(text) if text.isdigit() else text
     alphanum = lambda key: [convert(c) for c in re.split('([-+]?[0-9]*\.?[0-9]*)', key)]
@@ -74,7 +75,7 @@ def write_Excel(dir_path):
     data = {'Method': method_list, 'Title': title_list, 'Molecule': molecule_list, 'Conformer': conformer_list, 'NImag': NImag_list,
            'Z (Hartree)': Z_list, 'E (Hartree)': E_list, 'H (Hartree)': H_list, 'G (Hartree)': G_list}
     df = pd.DataFrame(data, columns=['Method', 'Title', 'Molecule', 'Conformer', 'NImag', 'Z (Hartree)', 'E (Hartree)', 'H (Hartree)', 'G (Hartree)'])
-    title_list = sort_human(title_list)
+    title_list = sortHuman(title_list)
     sorted_df = df.set_index('Title').reindex(title_list).reset_index()
     print("# Sorted data frame:\n", sorted_df)
 
