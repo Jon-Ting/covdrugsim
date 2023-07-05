@@ -21,7 +21,7 @@ def replaceMultiple(main_str, toBeReplaced, new_str):
     return main_str
 
 
-def find_val(line_list, target_str):
+def findVal(line_list, target_str):
     """Find the values of interest from Gaussian output files"""
     val, isEnergy, isMethod = None, 'Energies' in target_str[0] or 'Enthalpies' in target_str[0], '%chk' in target_str[0]
     for i, string in enumerate(target_str):
@@ -64,7 +64,7 @@ def write_Excel(dir_path):
                 line_list = f.readlines()
                 line_list.reverse()
                 for i, var_list in enumerate(var_fill_list):
-                    val = find_val(line_list, keyword_list[i])
+                    val = findVal(line_list, keyword_list[i])
                     var_list.append(val)
                 title_list.append(title)
                 molecule_list.append(replace_multiple(title.split('c')[0].replace('_', ''), ['TR', 'TSS', 'TP'], ''))
