@@ -1,29 +1,44 @@
 [tool.poetry]
 name = "covdrugsim"
 version = "0.1.0"
-description = "Quantum mechanical calculations and molecular dynamics simulations of covalent drugs"
-authors = ["Jonathan Yik Chang Ting"]
+description = "Package to automate quantum mechanical calculations and molecular dynamics simulations of covalent drugs."
+authors = ["Jonathan Yik Chang Ting <jonting97@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-include = ["tests/*"]
+homepage = "https://github.com/Jon-Ting/covdrugsim"
+repository = "https://github.com/Jon-Ting/covdrugsim"
+documentation = "https://covdrugsim.readthedocs.io/en/latest/"
+keywords = ["covalent", "drug", "quantum", "mechanic", "molecular", "dynamics", "simulation"]
+classifiers = [
+    "Intended Audience :: Science/Research", 
+    "Natural Language :: English", 
+    "Operating System :: OS Independent", 
+    "Programming Language :: Python :: 3", 
+    "Topic :: Scientific/Engineering", 
+]
+include = ["tests/*", "setup.py"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-matplotlib = "^3.7.1"
-numpy = "^1.25.0"
-pandas = "^2.0.2"
-seaborn = "^0.12.2"
+python = ">=3.9"
+matplotlib = ">=3.7.1"
+numpy = ">=1.25.0"
+pandas = ">=2.0.2"
+seaborn = ">=0.12.2"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.4.0"
-pytest-cov = "^4.1.0"
-jupyter = "^1.0.0"
-myst-nb = "^0.17.2"
-sphinx-autoapi = "^2.1.1"
-sphinx-rtd-theme = "^1.2.2"
-python-semantic-release = "^7.34.6"
+pytest = ">=7.4.0"
+pytest-cov = ">=4.1.0"
+jupyter = ">=1.0.0"
+myst-nb = {version = ">=0.17.2", python = "^3.9"}
+sphinx-autoapi = ">=2.1.1"
+sphinx-rtd-theme = ">=1.2.2"
+python-semantic-release = ">=7.34.6"
+
 [tool.semantic_release]
-version_variable = "pyproject.toml:version" # version location
+version_variable = [
+    "setup.py:__version__",
+    "pyproject.toml:version",
+]                                           # version location
 branch = "main"                             # branch to make releases of
 changelog_file = "CHANGELOG.md"             # changelog file
 build_command = "poetry build"              # build dists
@@ -32,9 +47,6 @@ upload_to_release = true                    # auto-create GitHub release
 upload_to_pypi = false                      # don't auto-upload to PyPI
 remove_dist = false                         # don't remove dists
 patch_without_tag = true                    # patch release by default
-
-[tool.semantic_release]
-version_variable = "pyproject.toml:version"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
