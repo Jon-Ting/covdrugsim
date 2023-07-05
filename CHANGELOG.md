@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-07-05)
+
+### Feature
+
+* **tabulate:** Renamed a function in tabulate.py ([`5e0c885`](https://github.com/Jon-Ting/covdrugsim/commit/5e0c8859e10071c38c6d3bb22b864ede56686739))
+* **tabulate:** Renamed a function in tabulate.py ([`f608ca2`](https://github.com/Jon-Ting/covdrugsim/commit/f608ca2151e73a226e4a9634f8cc606ec166d3af))
+
 ## v0.1.0 (2023-07-05)
 
 ### Feature
