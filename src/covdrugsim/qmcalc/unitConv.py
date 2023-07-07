@@ -9,7 +9,7 @@ R = 8.314462618  # Ideal gas constant, equivalent to kB, but expressed in per mo
 cal2J = 4.184
 
 
-def E_unit_conv(E_kcal, E_kJ, verbose=False):
+def energyUnitsConversion(E_kcal, E_kJ, verbose=False):
     """Convert between kcal and kJ.
 
     Parameters
@@ -43,7 +43,7 @@ def E_unit_conv(E_kcal, E_kJ, verbose=False):
     return E_kcal, E_kJ
 
 
-def eyring(k, dGbarr, T, verbose=False):
+def eyringEquation(k, dGbarr, T, verbose=False):
     """Calculate off rate or elimination barrier from each other at a specific temperature using Eyring-Polanyi equation.
 
     Parameters
@@ -84,7 +84,7 @@ def eyring(k, dGbarr, T, verbose=False):
     return k, dGbarr
 
 
-def exp_time(k, t_half, RT, verbose=False):
+def timeUnitsConversion(k, t_half, RT, verbose=False):
     """Interconvert between off rate (s^-1), half life (s), and residence time (s).
 
     Parameters

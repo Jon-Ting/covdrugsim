@@ -1,16 +1,16 @@
-import os
+from os import listdir
 from os.path import isdir
 import re
 
 import pandas as pd
 
 
-def sortHuman(list):
-    """Sort a given list in a more "human" way"""
+def sortHuman(alist):
+    """Sort a given alist in a more 'human' way"""
     convert = lambda text: float(text) if text.isdigit() else text
     alphanum = lambda key: [convert(c) for c in re.split('([-+]?[0-9]*\.?[0-9]*)', key)]
-    list.sort(key=alphanum)
-    return list
+    alist.sort(key=alphanum)
+    return alist
 
 
 def replaceMultiple(mainStr, toBeReplaced, newStr):
@@ -51,7 +51,7 @@ def findVal(lineList, targetStr):
     return val
 
 
-def write_Excel(dir_path):
+def writeToExcel(dir_path):
     """Write a new Excel file tabulating the quantities of interest"""
     methodList, titleList, moleculeList, conformerList, NImagList, ZList, EList, HList, GList, MP2List = [], [], [], [], [], [], [], [], [], []
     varFillList = [methodList, NImagList, ZList, EList, HList, GList]
@@ -98,8 +98,8 @@ if __name__ == "__main__":
     # Change this!
     inputDir = "/User/kahochow/Desktop/Li_mechanism/Li_work/Reactant"
 
-    groups = [f for f in os.listdir(inputDir) if isdir('{0}/{1}'.format(inputDir, f))]
+    groups = [f for f in listdir(inputDir) if isdir('{0}/{1}'.format(inputDir, f))]
     print("\n# Tabulating values of interest from Gaussian .out files to an Excel sheet...")
     print("\n# Input directory:\n", inputDir, "\n\n# Groups:\n", groups, "\n")
-    workbook = write_Excel(inputDir)
+    workbook = writeToExcel(inputDir)
 
