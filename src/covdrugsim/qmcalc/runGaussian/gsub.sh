@@ -1,66 +1,67 @@
 #!/bin/bash
 # Script to make job submission to PBS Pro Scheduler more convenient.
-# Loop through all directories and submit all files with 'gsub.sh' in the name.
+# Loop through all directories and submit all files with '*.sh' (modify FILENAME for this) in the name.
 
-FILE_NAME=*.sh
+FILENAME=*.sh
 
-return_dir () {
+returnDir () {
     echo -e "\nRETURN"
     cd ..
 }
 
-is_sh_file () {
-    if [[ $1 == $FILE_NAME ]]
+# Check whether a given file matches the description of submission script (according to FILENAME) and act accordingly
+isSubmitScript () {
+    if [[ $1 == $FILENAME ]]
     then
-        echo "IS $FILE_NAME, edit"
+        echo "IS $FILENAME, editting..."
         dirpath=$(pwd)
         abspath="$dirpath/$1"
-        dos2unix $abspath
-        echo "Submitting"
-        qsub -A UQ-SCI-SCMB $dirpath/$1  # If RCC clusters
-        # qsub $dirpath/$1  # Otherwise
+        dos2unix $abspath  # Remove incompatible symbols from other OS system like Windows
+        echo "Submitting..."
+        # qsub -A UQ-SCI-SCMB $dirpath/$1  # If RCC clusters
+        qsub $dirpath/$1  # Otherwise
     else
-        echo "NOT $FILE_NAME, skip" 
+        echo "NOT $FILENAME, skipping..." 
     fi
     echo ""
 }
 
-check_dir_file () {
+checkDirOrFile () {
     if [ -d $1 ]
     then
         echo "$1 IS dir, enter"
         echo -e "-----------\n"
         cd $1
-        for more_entry in $(ls)
+        for moreEntries in $(ls)
         do
-            check_dir_file $more_entry
+            checkDirOrFile $moreEntries
         done
-        return_dir
+        returnDir
     else
         echo "$1 NOT dir, what file?"
-        is_sh_file $1
+        isSubmitScript $1
     fi
 }
 
-loop_check() {
+loopCheck() {
     for entry in $(ls)
     do
-        check_dir_file $entry
+        checkDirOrFile $entry
         echo "Checked $entry, next"
         echo -e "-----------\n"
     done
 }
 
-echo "Looking for $FILE_NAME files to submit to Scheduler"
-echo "-----------------------------------------------------"
+echo "Looking for $FILENAME files to submit to Scheduler..."
+echo "------------------------------------------------------"
 if [ $# -eq 0 ]
 then
-    loop_check
+    loopCheck
 else
     for directory in "$@"
     do
         cd $directory
-        loop_check
+        loopCheck
     done
 fi
 echo -e "Done!\n"
