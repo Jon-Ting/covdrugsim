@@ -19,7 +19,7 @@ Code snippets in docstrings are indicated by three greater-than signs::
 Use the built-in ``help`` function to view a function's docstring::
 
   >>> import covdrugsim
-  >>> help(covdrugsim.qmcalc.unitConv.unitConv)
+  >>> help(covdrugsim.qmcalc.genScripts)
   ... # docstring: +SKIP
 
 Utilities
@@ -35,5 +35,11 @@ __version__ = version('covdrugsim')
 
 # Populate package namespace
 __all__ = ['mdsim', 'qmcalc']
+from covdrugsim.datasets import genExampleXYZs, getExampleEnergyLevellerInputPath, getExampleChargePath
+from covdrugsim.qmcalc.constants import keywordDict
+from covdrugsim.qmcalc.genScripts import genAllScripts
+from covdrugsim.qmcalc.admin import groupFilesIntoDir
+from covdrugsim.qmcalc.tabulate import writeToExcel
+from covdrugsim.qmcalc.unitConv import energyUnitsConversion, eyringEquation, timeUnitsConversion
+
 from covdrugsim.mdsim import mdAnalyse
-from covdrugsim.qmcalc.unitConv.unitConv import exp_time
