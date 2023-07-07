@@ -2,6 +2,17 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-07-07)
+
+### Feature
+
+* **import:** Allowed essential functions to be imported directly from package namespace ([`3ba99be`](https://github.com/Jon-Ting/covdrugsim/commit/3ba99be4dd55f8356060ef291733e0d333e4ec9d))
+* **qmcalc:** Tidied up qmcalc functionalities ([`07d9e75`](https://github.com/Jon-Ting/covdrugsim/commit/07d9e756ac20ba42f8ba5b90ab05d20970d8684c))
+
+### Documentation
+
+* **prepGaussian:** Added docstrings to functions in prepGaussian.py ([`0661eb6`](https://github.com/Jon-Ting/covdrugsim/commit/0661eb63b9b1d22007003ec711d0be99482580b1))
+
 ## v0.2.0 (2023-07-05)
 
 ### Feature
