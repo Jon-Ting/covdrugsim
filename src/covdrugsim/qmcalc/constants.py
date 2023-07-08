@@ -1,5 +1,5 @@
 keywordDict = {
-    'GOVF': {'grid': ' opt int(grid=ultrafine) scf=tight', 'freq': ' freq=noraman', 'mem': int(8000), 'jobfs': int(2400), 'time': '10:00:00'},  # geometry optimization with vibrational frequency calculation
+    'GOVF': {'grid': ' opt=calcfc int(grid=ultrafine)', 'freq': ' freq', 'mem': int(4000), 'jobfs': int(9000), 'time': '24:00:00'},  # geometry optimization with vibrational frequency calculation
     'TSGOVF': {'grid': ' opt=(ts,calcfc,noeigentest,maxcyc=200) int(grid=ultrafine) scf=tight', 'freq': ' freq=noraman', 'mem': int(4000), 'jobfs': int(4000), 'time': '10:00:00'},  # transition state GOVF
 
     'SPEXGO': {'grid': '', 'time': '48:00:00', 'vmem': int(10000), 'ncpus': int(16)},  # single-point energy calculation without geometry optimization
