@@ -30,7 +30,7 @@ def energyUnitsConversion(E_kcal, E_kJ, verbose=False):
 
     Examples
     --------
-    >>> E_unit_conv(100, False, True)
+    >>> energyUnitsConversion(100, False, True)
     """
     if not(E_kcal):  # If no value is provided
         E_kcal = E_kJ/cal2J
