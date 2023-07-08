@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-07-08)
+
+### Documentation
+
+* **readme:** Updated example usage in readme ([`5edf801`](https://github.com/Jon-Ting/covdrugsim/commit/5edf8015371e30041ecdec021398898320a80842))
+* **example:** Updated examples ([`17c9eef`](https://github.com/Jon-Ting/covdrugsim/commit/17c9eefa9255a5569dd356e0daeb160381fa078f))
+
 ## v0.4.0 (2023-07-08)
 
 ### Feature
