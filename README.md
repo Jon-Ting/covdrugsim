@@ -13,9 +13,6 @@
 * Automatic analysis of molecular dynamics simulation trajectories.
 
 ### Under Development
-* Restructure the source code.
-* Complete unit tests in tests/.
-* Add function docstrings.
 * Complete example.ipynb.
 
 ## Installation
@@ -34,14 +31,10 @@ $ conda install -c conda-forge covdrugsim
 `covdrugsim` can be used to conduct quantum mechanical calculations and molecular dynamics simulations as follows:
 
 ```python
-from covdrugsim.qmCalc import qmCalc
-from covdrugsim.mdSim import mdSim
-import matplotlib.pyplot as plt
+from covdrugsim.qmCalc.genScript import genAllScripts
 
-filePath = "test.txt"  # Path to your file
-qmCalc(filePath)
-mdSim(filePath)
-plt.show()
+targetDirPath = '/mnt/c/Users/JonTing/exampleXYZs'  # Absolute path to the directories containing all of your xyz files to be run
+genAllScripts(targetDirPath, verbose=True)
 ```
 Check out the [notebook tutorial](https://github.com/Jon-Ting/covdrugsim/blob/main/docs/example.ipynb) for further explanations and demonstrations!
 
