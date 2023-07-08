@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-07-08)
+
+### Feature
+
+* Updated example xyz files and added their Gaussian outputs ([`33671b8`](https://github.com/Jon-Ting/covdrugsim/commit/33671b8fb687af9d9efe1e2711c556ed9d4cced8))
+
+### Documentation
+
+* **qmcalc:** Made qmcalc functions more verbose and adjusted default values ([`ac79de3`](https://github.com/Jon-Ting/covdrugsim/commit/ac79de331189bed1da7dfa9dc651a7fca745a14d))
+
 ## v0.3.1 (2023-07-08)
 
 
