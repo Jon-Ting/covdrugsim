@@ -1,9 +1,8 @@
 """
-CovDrugSim
-==========
+CovDrugSim Package
+==================
 
-Provides
-    1. Representation of surface of 3D complex objects consisting of spherical entities as 
+Description
 
 How to use the documentation
 ----------------------------
