@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.3 (2023-08-17)
+
+### Documentation
+
+* **example:** Updated example files ([`f0305a4`](https://github.com/Jon-Ting/covdrugsim/commit/f0305a4a41d28af6cfe8bc5dfd60a8e2dfe3d50c))
+* **__init__.py:** Fixed implicit name issue on readthedocs ([`544b5bf`](https://github.com/Jon-Ting/covdrugsim/commit/544b5bf59f539f49a7d24fbdd5b31a1d108cfc61))
+
 ## v0.4.2 (2023-08-04)
 
 
