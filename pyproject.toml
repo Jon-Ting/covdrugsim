@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "covdrugsim"
-version = "0.4.11"
+version = "0.4.12"
 description = "Package to automate quantum mechanical calculations and molecular dynamics simulations of covalent drugs."
 authors = ["Jonathan Yik Chang Ting <jonting97@gmail.com>"]
 license = "MIT"
