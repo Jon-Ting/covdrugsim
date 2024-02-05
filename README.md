@@ -9,7 +9,7 @@
 ## Features
 
 ### Aims
-* Automatic creation of HPC submission files to run Gaussian calculations.
+* Automatic creation of high-performance computing cluster submission files to run Gaussian calculations.
 * Automatic analysis of molecular dynamics simulation trajectories.
 
 ### Under Development
