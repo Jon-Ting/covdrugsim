@@ -68,14 +68,14 @@ plotFigs.py - Plots figures for QM data analysis.
 
 
 ### Molecular Dynamics Simulations (mdsim)
-- config.py contains some variables that are used repetitively for almost all files.
-- baseID.py plots the distances between potential base species and the targeted protons.
-- bbRMSD.py plots the RMSD of Bruton's Tyrosine Kinease (BTK) backbones over time, for the purpose of checking the stability of the simulations.
-- hbondAnalysis.py plots the distribution of the number of hydrogen bonds between BTK backbones over time.
-- ligDihedral.py plots the distribution of the critical C=C-C=O dihedral angle near BTK active site over time.
-- SCbondDist.py plots the distances between the reacting S and C atoms over time.
-- sumCharge.py sums up the charges to aid in the parameterisation of non-standard amino acids.
-- prepMTB.py was written during an attempt to map the unbound ligand to covalently bound ligand. Was not utilised in the end.
+* config.py contains some variables that are used repetitively for almost all files.
+* baseID.py plots the distances between potential base species and the targeted protons.
+* bbRMSD.py plots the RMSD of Bruton's Tyrosine Kinease (BTK) backbones over time, for the purpose of checking the stability of the simulations.
+* hbondAnalysis.py plots the distribution of the number of hydrogen bonds between BTK backbones over time.
+* ligDihedral.py plots the distribution of the critical C=C-C=O dihedral angle near BTK active site over time.
+* SCbondDist.py plots the distances between the reacting S and C atoms over time.
+* sumCharge.py sums up the charges to aid in the parameterisation of non-standard amino acids.
+* prepMTB.py was written during an attempt to map the unbound ligand to covalently bound ligand. Was not utilised in the end.
 
 ## Documentation
 
