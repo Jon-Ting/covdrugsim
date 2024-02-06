@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.2 (2024-02-06)
+
+### Documentation
+
+* **readme:** Updated readme ([`d9d6218`](https://github.com/Jon-Ting/covdrugsim/commit/d9d6218b9dd003b86886d678a948545a0ad192f0))
+
 ## v1.0.1 (2024-02-06)
 
 
